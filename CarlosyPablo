@@ -1,0 +1,43 @@
+import java.util.Scanner;
+    public static void main(String[] args) {
+
+    System.out.println("Dime 2 nuemros");
+    int n1 = new Scanner(System.in).nextInt();
+    int n2 = new Scanner(System.in).nextInt();
+
+    System.out.println("Tienes los numeros "+n1+" y "+n2+"\n" +
+            "¿Que quieres hacer con ellos?" +
+            "\n 1. Sumar" +
+            "\n 2. Restar" +
+            "\n 3. Multiplicar" +
+            "\n 4. Dividir" +
+            "\n 5. Salir");
+
+    int op = new Scanner(System.in).nextInt();
+
+        if(op<1 || op>5){
+            System.out.println("La opcion no es válida");
+        }else {
+            switch (op) {
+                case 1:
+                    System.out.println(n1 + n2);
+                    break;
+                case 2:
+                    System.out.println(n1 - n2);
+                    break;
+                case 3:
+                    System.out.println(n1 * n2);
+                    break;
+                case 4:
+                    System.out.println(n1 / n2);
+                    if (n1 == 0) {
+                        System.out.println("no se puede dividir entre 0");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Saliendo...");
+                    break;
+            }
+        }
+    }
+}
